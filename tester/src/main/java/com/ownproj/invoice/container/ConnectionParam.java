@@ -8,7 +8,8 @@ public class ConnectionParam {
 	public static final String PASSWORD="root";*/
 
 	//Pdf File Upload Path
-	public static final String PDF_UPLOAD_PATH=System.getProperty("user.dir")+"/pdfFolder";
+	//public static final String PDF_UPLOAD_PATH=System.getProperty("user.dir")+"/pdfFolder";
+	public static final String PDF_UPLOAD_PATH="/opt/webserver/pdfFolder";
 	public static final String PDF_IMAGE_PATH="/opt/webserver/webapps/ROOT/WEB-INF/classes/ImageFolder";
 
 
