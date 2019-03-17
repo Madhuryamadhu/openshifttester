@@ -250,7 +250,7 @@
    }
    
    function goBack(){
-	   window.location = "index.html";
+	   window.location = "index.jsp";
    }
    
    </script>
