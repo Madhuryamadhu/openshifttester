@@ -291,7 +291,7 @@ public class CommonDAO {
 			table1.addCell("Rs."+bean.getGrandTotal());
 
 
-			PdfWriter writer=PdfWriter.getInstance(document, new FileOutputStream(wokspacePath+pdfName+".pdf"));
+			PdfWriter writer=PdfWriter.getInstance(document, new FileOutputStream(wokspacePath+"/"+pdfName+".pdf"));
 			document.open();
 
 			PdfContentByte canvas = writer.getDirectContent();
@@ -366,7 +366,7 @@ public class CommonDAO {
 
 
 			document.close();
-			bean.setPdfFullPath(wokspacePath+pdfName+".pdf");
+			bean.setPdfFullPath(wokspacePath+"/"+pdfName+".pdf");
 			bean.setPdfFileName(pdfName+".pdf");
 		} catch (FileNotFoundException e) {
 			logger.error("Exception:-"+e.getMessage(),e);
