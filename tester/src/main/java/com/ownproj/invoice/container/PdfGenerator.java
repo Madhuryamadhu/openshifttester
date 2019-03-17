@@ -31,7 +31,8 @@ public class PdfGenerator {
 	private static final Logger logger = LogManager.getLogger(PdfGenerator.class);
 	public static void main(String[] args) throws FileNotFoundException, DocumentException {
 
-		Pdfgenerate();
+		//Pdfgenerate();
+		System.out.println(System.getProperty("user.dir")+"\\ImageFolder");
 
 	}
 
@@ -175,6 +176,7 @@ public class PdfGenerator {
 		return true;
 	}
 
+	
 
 }  
 

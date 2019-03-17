@@ -8,7 +8,8 @@ public class ConnectionParam {
 	public static final String PASSWORD="root";*/
 
 	//Pdf File Upload Path
-	public static final String PDF_UPLOAD_PATH="C:\\Users\\pradeep.mascarenhas\\Desktop\\GroupAmountCalculator\\PdfFolder";
+	public static final String PDF_UPLOAD_PATH=System.getProperty("user.dir")+"\\pdfFolder";
+	public static final String PDF_IMAGE_PATH=System.getProperty("user.dir")+"\\ImageFolder";
 
 
 	public static final String DRIVER="com.mysql.cj.jdbc.Driver";  

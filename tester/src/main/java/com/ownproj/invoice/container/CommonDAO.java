@@ -247,7 +247,8 @@ public class CommonDAO {
 
 	private boolean Pdfgenerate(CommonBean bean) {
 		try {
-			String wokspacePath="F:/ProjectWorkSpace/JobPortal/InvoiceBuilder";
+			String wokspacePath=ConnectionParam.PDF_UPLOAD_PATH;
+			logger.info(wokspacePath);
 			String pdfName=new SimpleDateFormat("ddMMyyyyhhss").format(new Date())+"_"+bean.getName().replace(" ", "_");
 
 			Document document = new Document(PageSize.A4);
@@ -290,7 +291,7 @@ public class CommonDAO {
 			table1.addCell("Rs."+bean.getGrandTotal());
 
 
-			PdfWriter writer=PdfWriter.getInstance(document, new FileOutputStream(wokspacePath+"/PdfFolder/"+pdfName+".pdf"));
+			PdfWriter writer=PdfWriter.getInstance(document, new FileOutputStream(wokspacePath+pdfName+".pdf"));
 			document.open();
 
 			PdfContentByte canvas = writer.getDirectContent();
@@ -302,7 +303,7 @@ public class CommonDAO {
 			rectS.setUseVariableBorders(true); // the full width will be visible
 			canvas.rectangle(rectS);
 
-			Image img = Image.getInstance(wokspacePath+"/ImageFolder/ele.png");
+			Image img = Image.getInstance(ConnectionParam.PDF_IMAGE_PATH+"/ele.png");
 			img.scaleToFit(200,180);  
 			img.setAbsolutePosition(0,680);
 			img.setAlignment(Image.MIDDLE);          
@@ -365,16 +366,16 @@ public class CommonDAO {
 
 
 			document.close();
-			bean.setPdfFullPath(wokspacePath+"/PdfFolder/"+pdfName+".pdf");
+			bean.setPdfFullPath(wokspacePath+pdfName+".pdf");
 			bean.setPdfFileName(pdfName+".pdf");
 		} catch (FileNotFoundException e) {
-			logger.error("Exception:-"+e.getMessage());
+			logger.error("Exception:-"+e.getMessage(),e);
 		} catch (MalformedURLException e) {
-			logger.error("Exception:-"+e.getMessage());
+			logger.error("Exception:-"+e.getMessage(),e);
 		} catch (IOException e) {
-			logger.error("Exception:-"+e.getMessage());
+			logger.error("Exception:-"+e.getMessage(),e);
 		} catch (DocumentException e) {
-			logger.error("Exception:-"+e.getMessage());
+			logger.error("Exception:-"+e.getMessage(),e);
 		}
 
 

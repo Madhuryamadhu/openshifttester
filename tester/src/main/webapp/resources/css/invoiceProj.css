@@ -1,0 +1,82 @@
+.heading {
+	font-family: 'Merriweather', serif;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	font-size: 42px;
+	padding-bottom: 14px;
+	margin-bottom: 0px;
+	color: white;
+}
+
+.btn {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #0D3D5B;
+}
+
+.required {
+	color: #E8001B;
+}
+
+.error {
+	color: #E8001B;
+	position: absolute;
+	font-size: 12px;
+}
+
+#customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	/* width: 100%; */
+}
+
+#customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+	background-color: #ddd;
+}
+
+#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #0D3D5B;
+	color: white;
+}
+
+
+
+/*All Tables*/
+.invoiceTable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	/* width: 100%; */
+}
+
+.invoiceTable td, .invoiceTable th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.invoiceTable tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.invoiceTable tr:hover {
+	background-color: #ddd;
+}
+
+.invoiceTable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #0D3D5B;
+	color: white;
+}
