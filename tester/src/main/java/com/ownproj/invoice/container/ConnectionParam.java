@@ -9,7 +9,7 @@ public class ConnectionParam {
 
 	//Pdf File Upload Path
 	public static final String PDF_UPLOAD_PATH=System.getProperty("user.dir")+"/pdfFolder";
-	public static final String PDF_IMAGE_PATH=System.getProperty("user.dir")+"/ImageFolder";
+	public static final String PDF_IMAGE_PATH="/opt/webserver/webapps/ROOT/WEB-INF/classes/ImageFolder";
 
 
 	public static final String DRIVER="com.mysql.cj.jdbc.Driver";  
